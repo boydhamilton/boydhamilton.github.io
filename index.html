@@ -1,17 +1,95 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <h1>Boyd Robert Hamilton</h1>
-
-    <a href="https://www.github.com/boydhamilton">github</a>
+    <meta charset="UTF-8">
+    <title>Boyd Robert Hamilton</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <p>
-    Passionate about electrical and computer engineering, low level software and embedded system design, game development, algorithmic and mathematical modeling, data preprocessing
-    </p>
+    <header>
+        <h1>Boyd Robert Hamilton</h1>
+        <h4>ECE @ UBC, Vancouver</h4>
+    </header>
+    <div class="social-buttons">
+        <a href="https://github.com/boydhamilton" class="icon-button github" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/your-profile" class="icon-button linkedin" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
+    
+    
+
+    <section>
+        <p>
+            Working with low level software and embedded system design, game development, algorithmic and mathematical modeling, data analysis and preprocessing.
+        </p>
+        <p>
+            I love learning new games, especially ones with a bit of luck involved! I'm able to combine this with interests in math by making short Desmos projects.
+            Look at my work on a crude 
+            <a href="https://www.playmonster.com/wp-content/uploads/2018/06/Farkle-Rules.pdf?srsltid=AfmBOoquToWhmGWfaA60JLz-Nqj2FsdnyuPcwkBe38_3142V71d7EqdS">Farkle</a> 
+            <a href="https://www.desmos.com/calculator/lhcsj2lqzq">model</a>, 
+            or at a 
+            <a href="https://www.desmos.com/calculator/1ifikuf4iy">cheap stock forecasting model</a> 
+            using stochastic differential equations.
+        </p>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <a href="https://github.com/boydhamilton/waddles">waddles</a> <br>
+                (Machine learning) - Rust <br>
+                <p>
+                    Short thing I started during my first uni finals season to learn about ML without any libraries to help. 
+                    Was a nice introduction to Rust!  
+                    Tested my MATH 152 (Linear Systems I) knowledge by building a classification model just using class concepts.
+                </p>
+            </li>
+
+            <li>
+                <a href="https://github.com/boydhamilton/rawr">rawr</a> <br>
+                (Rendering/drawing framework) - C<br>
+                <p>
+                    Thought modern game engines/renderers had too many pixels and colours. 
+                    Built an SDL abstraction that makes it fast and easy to produce cool, retro style games.
+                </p>
+            </li>
+
+            <li>
+                <a href="https://github.com/boydhamilton/mogi">mogi</a> <br>
+                (Game framework) - Java<br>
+                <p>
+                    Was my first stab at a game engine, made an entity component system based engine to ensure usage was robust.
+                </p>
+            </li>
+
+            <li>
+                <a href="https://github.com/boydhamilton/euclid">euclid</a> <br>
+                (LaTeX rendering and interpreting) - JS x React<br>
+                <p>
+                    I love math, and love LaTeX, and the online calculator I used (Desmos) didn't support all the LaTeX commands I wanted. 
+                    Built an interpreter on top of an existing JS LaTeX library to get a fully functional calculator! 
+                    Used MATH 101 (Integral Calculus with Applications) content to build Simpson approximation to calculate integrals. 
+                    Used AP Calc AB content with definition of derivative to calculate derivatives at a point.
+                </p>
+            </li>
+
+            <li>
+                <a href="https://github.com/boydhamilton/bunk">bunk</a> <br>
+                (Tiny CLI steganographer) - C++<br>
+                <p>
+                    Smashing binaries together so two images become one image! 
+                    Learned a bit about cryptography through the surrounding research.
+                </p>
+            </li>
+        </ul>
+    </section>
 </body>
 
 </html>

@@ -1,0 +1,123 @@
+/* style.css */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+/* Header Styling */
+header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+}
+
+header h4 {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Section Styling */
+section {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    padding: 1rem;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+/* Project List */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.2s ease;
+}
+
+li:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+li a {
+    font-weight: bold;
+    color: #1e88e5;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+li p {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.social-buttons {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.social-buttons {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin: 0 0.5rem;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    color: #333;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.icon-button:hover {
+    background-color: #1e88e5;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.icon-button.github:hover {
+    background-color: #000;
+}
+
+.icon-button.leetcode:hover {
+    background-color: #f89f1b;
+}
+
+.icon-button.linkedin:hover {
+    background-color: #0a66c2;
+}
