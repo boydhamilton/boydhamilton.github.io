@@ -29,7 +29,7 @@
   --card-radius: 8px;
 }
 
-body.dark {
+html.dark {
   --bg-color: #1e1e1e;
   --text-color: #d4d4d4;
   --heading-color: #ffb347; /* mellow orange-yellow */
@@ -71,19 +71,19 @@ header h1 {
   color: var(--heading-color);
 }
 
+
+
 header h4 {
   font-size: var(--font-size-md);
   color: var(--subheading-color);
 }
 
-/* Sections */
 section {
   max-width: 800px;
   margin: 0 auto 2rem auto;
   padding: 1rem;
 }
 
-/* Paragraphs */
 p {
   margin-bottom: 1rem;
   font-family: 'Segoe UI', Verdana, sans-serif;
@@ -91,7 +91,6 @@ p {
   color: var(--text-color);
 }
 
-/* Project List */
 ul {
   list-style-type: none;
   padding-left: 0;
@@ -126,10 +125,12 @@ li p {
   color: var(--secondary-text);
 }
 
-/* Social Buttons */
 .social-buttons {
   text-align: center;
   margin-bottom: 2rem;
+  animation: rest-in 1.8s ease-out forwards;
+  animation-delay: 1.8s;
+  opacity: 0;
 }
 
 .icon-button {
@@ -165,21 +166,57 @@ li p {
   background-color: var(--linkedin-bg);
 }
 
-.floating-sidebar {
-    position:fixed;
-    top: calc(400vw * 0.05);
-    left: calc(100vw * 0.05); 
-    padding: 1rem;
-    border-radius: 10px;
-    background-color: var(--card-bg);
+.icon-button.mode {
+  background-color: var(--card-bg);
+  width: 60px;
+  height: 60px;
+  border-radius: var(--card-radius);
 }
 
-/*anim*/
+.icon-button.mode:hover{
+  background-color: var(--link-color);
+}
+
+.link-container {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  animation: rest-in 1.8s ease-out forwards;
+  animation-delay: 2.2s;
+  opacity: 0;
+}
+
+@keyframes rest-in {
+    to {
+      opacity: 1;
+    }
+}
+
+/*intro*/
+.intro-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
 .intro-title {
     opacity: 0.5;
     filter: blur(10px);
     animation: focusIn 1.8s ease-out forwards; 
     animation-delay: 0.5s;
+    font-size: 6rem;
+    margin: 0rem;
 }
 @keyframes focusIn {
     to {
@@ -192,9 +229,77 @@ li p {
     clip-path: inset(0 100% 0 0);
     animation: revealText 2s ease-out forwards;
     animation-delay: 1.2s;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
 }
 @keyframes revealText {
     to {
       clip-path: inset(0 0 0 0);
     }
 }
+
+.root-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.root-link:hover {
+  transform: translateY(-4px);  
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px var(--card-hover-shadow);
+}
+
+.project-card a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+  box-shadow: 0 4px 12px var(--card-hover-shadow);
+}
+
+/* Tags */
+.tags {
+  margin-bottom: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.2em 0.6em;
+  margin-right: 0.4em;
+  margin-bottom: 0.3em;
+  border-radius: 1em;
+  font-weight: 500;
+  color: white;
+  background-color: #777; /* fallback */
+}
+
+.tag.c        { background-color: #5e97d0; }
+.tag.cpp      { background-color: #004482; }
+.tag.rust     { background-color: #dea584; }
+.tag.java     { background-color: #b07219; }
+.tag.js       { background-color: #f0db4f; color: #000; }
+.tag.react    { background-color: #61dafb; color: #000; }
+.tag.kicad    { background-color: #295f8a; }
+.tag.latex    { background-color: #008080; }
+.tag.sdl      { background-color: #d35f5f; }
+.tag.cli      { background-color: #444; }
