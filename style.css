@@ -271,7 +271,7 @@ li p {
 
 .project-card a:hover {
   text-decoration: underline;
-  box-shadow: 0 4px 12px var(--card-hover-shadow);
+  /* box-shadow: 0 4px 12px var(--card-hover-shadow); */
 }
 
 /* Tags */
